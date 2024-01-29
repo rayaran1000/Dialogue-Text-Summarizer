@@ -4,6 +4,7 @@ from textSummarizer.utils.common import read_yaml,create_directories
 from textSummarizer.entity import DataIngestionConfig
 from textSummarizer.entity import DataValidationConfig
 from textSummarizer.entity import DataTransformationConfig
+from textSummarizer.entity import ModelTrainerConfig
 
 class ConfigurationManager:
     def __init__(
@@ -55,3 +56,28 @@ class ConfigurationManager:
         )
 
         return data_transformation_config
+    
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+
+        config= self.config.model_trainer # Calling the model_trainer dictionary created in config.yaml file
+        params=self.params.TrainingArguments # Calling the TrainingArguments dictionary in params.yaml file
+
+        create_directories([config.root_dir]) # Creating a directory using the root directory
+
+        model_trainer_config = ModelTrainerConfig( # Extracting the values from the config.yaml to here inside data_ingestion_config
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+            model_ckpt=config.model_ckpt,
+            num_train_epochs=params.num_train_epochs,
+            warmup_steps=params.warmup_steps,
+            per_device_train_batch_size=params.per_device_train_batch_size,
+            per_device_eval_batch_size= params.per_device_eval_batch_size,
+            weight_decay=params.weight_decay,
+            logging_steps=params.logging_steps,
+            evaluation_strategy=params.evaluation_strategy,
+            eval_steps=params.eval_steps,
+            save_steps=params.save_steps,
+            gradient_accumulation_steps=params.gradient_accumulation_steps
+        )
+
+        return model_trainer_config
