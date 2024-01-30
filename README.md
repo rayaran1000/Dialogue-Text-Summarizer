@@ -103,12 +103,13 @@ Email: aranya.ray1998@gmail.com
 
 
     
-# Deployment
+# Deployment Steps done :
 
 1. Created IAM user for deployment.
 2. Created ECR repo to store/save docker image.
 3. Created EC2 instance (Ubuntu) and installed docker in EC2 Machine.
-3. Setup Github secrets completed.
+4. Github Actions CI/CD pipeline created. 
+5. Setup Github secrets completed.
 
 ## Dataset and Model Specifications
 
