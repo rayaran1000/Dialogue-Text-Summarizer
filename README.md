@@ -111,7 +111,8 @@ Email: aranya.ray1998@gmail.com
 ![ECR](https://github.com/rayaran1000/Text-Summarizer/assets/122597408/f82453f2-b5f3-4ec7-8752-1d5cf496931c)
 3. Created EC2 instance (Ubuntu) and installed docker in EC2 Machine.
 ![EC2 instance ](https://github.com/rayaran1000/Text-Summarizer/assets/122597408/82cfdbac-304a-42f9-be28-c903f37d3ada)
-4. Github Actions CI/CD pipeline created. 
+4. Github Actions CI/CD pipeline created.
+![image](https://github.com/rayaran1000/Text-Summarizer/assets/122597408/d1aee62d-f987-432b-9c4f-63fbdd244cd4)
 5. Setup Github secrets completed.
 
 ## Dataset and Model Specifications
