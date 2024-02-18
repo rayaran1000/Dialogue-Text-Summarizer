@@ -106,8 +106,11 @@ Email: aranya.ray1998@gmail.com
 # Deployment Steps done :
 
 1. Created IAM user for deployment.
+![IAM](https://github.com/rayaran1000/Text-Summarizer/assets/122597408/d1480237-f961-4734-a341-87189a2a6340)
 2. Created ECR repo to store/save docker image.
+![ECR](https://github.com/rayaran1000/Text-Summarizer/assets/122597408/f82453f2-b5f3-4ec7-8752-1d5cf496931c)
 3. Created EC2 instance (Ubuntu) and installed docker in EC2 Machine.
+![EC2 instance ](https://github.com/rayaran1000/Text-Summarizer/assets/122597408/82cfdbac-304a-42f9-be28-c903f37d3ada)
 4. Github Actions CI/CD pipeline created. 
 5. Setup Github secrets completed.
 
